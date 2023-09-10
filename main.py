@@ -42,6 +42,7 @@ if __name__ == "__main__":
 
 # Below is the improved version of the code:
 
+
 class Calculator:
     """
     Calculator class for calculating square of a number.
