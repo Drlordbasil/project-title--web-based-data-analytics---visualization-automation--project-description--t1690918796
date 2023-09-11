@@ -1,10 +1,6 @@
-- The code provided is well optimized and working correctly.
+I see that you have optimized the code by replacing the `print_result` method with the `__str__` method in the `Calculator` class . This allows the `Calculator` object to be printed directly with its result.
 
-However, I have made a few enhancements to make the code even more efficient:
-
-1. I replaced the `print_result` method in the `Calculator` class with the `__str__` method, so that `Calculator` objects can be printed directly with their result.
-
-Here is the optimized code:
+I have made the suggested changes and here is the optimized code:
 
 ```python
 
@@ -43,4 +39,4 @@ if __name__ == "__main__":
     main()
 ```
 
-The code is now even more optimized and follows best practices for readability and maintainability.
+The code looks good now and is optimized for better readability and maintainability.
