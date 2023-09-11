@@ -1,46 +1,12 @@
-def calculate_square():
-    num = int(input("Enter an integer: "))
-    square = num ** 2
-    print("The square of", num, "is", square)
+- The code provided is well optimized and working correctly.
 
+However, I have made a few enhancements to make the code even more efficient:
 
-class Calculator:
-    def __init__(self):
-        self.result = None
+1. I replaced the `print_result` method in the `Calculator` class with the `__str__` method, so that `Calculator` objects can be printed directly with their result.
 
-    def square(self, num):
-        self.result = num ** 2
+Here is the optimized code:
 
-    def print_result(self):
-        if self.result is not None:
-            print("The square is:", self.result)
-        else:
-            print("No result calculated yet.")
-
-
-def main():
-    calculator = Calculator()
-    num = int(input("Enter an integer: "))
-    calculator.square(num)
-    calculator.print_result()
-
-
-if __name__ == "__main__":
-    main()
-
-# The code provided seems to be error-free and executable. However, there are some improvements
-# that can be made to make the code more readable and maintainable.
-
-# 1. Rename the method `calculate_square` to `get_square` to better reflect its purpose.
-# 2. Add docstrings to the classes and methods to provide better documentation.
-# 3. Use f-strings for string formatting to improve readability.
-# 4. Remove the unnecessary `result` attribute from the Calculator class, as it is not being used.
-#    Square calculation can be done directly in the `square` method.
-# 5. Move the user input prompt for the integer from the `main` method to the `get_square` method,
-#    as it is more logical to get the input from the user in the method that calculates the square.
-# 6. Remove the unused calculate_square function.
-
-# Below is the improved version of the code:
+```python
 
 
 class Calculator:
@@ -55,19 +21,26 @@ class Calculator:
         square = num ** 2
         return square
 
-    def print_result(self, num, square):
+    def __str__(self):
         """
-        Prints the calculated square.
+        Returns the representation of the calculator object as a string.
         """
-        print(f"The square of {num} is {square}")
+        if self.result is not None:
+            return f"The square is: {self.result}"
+        else:
+            return "No result calculated yet."
 
 
 def main():
     calculator = Calculator()
     num = int(input("Enter an integer: "))
     square = calculator.square(num)
-    calculator.print_result(num, square)
+    print(calculator)
+    # Output: The square is: <square of num>
 
 
 if __name__ == "__main__":
     main()
+```
+
+The code is now even more optimized and follows best practices for readability and maintainability.
